@@ -332,15 +332,6 @@ body
   padding-bottom: 30px;
 }
 
-.contact .col-sm-4 p
-{
-  padding-top: 10px;
-  padding-bottom: 10px;
-  text-align: center;
-  background: #FFF;
-  border-radius: 50%;
-  color: #000;
-}
 
 .contact .col-sm-4 a
 {
@@ -348,49 +339,61 @@ body
   color: inherit;
 }
 
+.contact .myphone
+{
+  margin-bottom: 30px;
+}
+
 @media only screen and (max-width: 1024px) {
-  .user-box img
-  {
-    border-radius: 50%;
-    width: 400px;
-    border: 2px solid #6CAED5;
+
+  .about img{
+    height: 450px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
   }
-  .profile-img
-  {
-    border-radius: 5%;
-    height: 600px;
-    margin-bottom: 20px;
+
+  .services .container img{
+    width: 200px;
+    height: 200px;
   }
-  .services .col-sm-4 img
+  
+  .contact .container .row 
   {
-    width: 300px;
-    height: 300px;
-    transform: translateX(50%);
-  }
-  .services .col-sm-4 p
-  {
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    margin-top: 40px;
   }
-  .contact .row
-  {
-    width: 200%;
-    transform: translateX(10%);
-  }
-  .contact .col-sm-4 a
+  .contact p 
   {
     font-size: 18px;
-  }
-  .services .container
-  {
-    flex-direction: column;
-    width: 200%;
-  }
-  .row
-  {
     text-align: center;
-    align-items: flex-start;
-    flex-direction: column;
-    width: 200%;
   }
+  .contact .container .col-sm-4 a
+  {
+    font-size: 23px;
+    text-align: center;
+  }
+  .contact .myphone
+  {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .contact .mysocialmedia
+  {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .contact .myemail
+  {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
 }
