@@ -319,6 +319,10 @@ body
     transform: rotateY(360deg);
   }
 }
+.contact
+{
+  padding-top: 30px;
+}
 
 .contact h3
 {
@@ -343,6 +347,46 @@ body
 {
   margin-bottom: 30px;
 }
+
+.contact .emailMessage
+{
+  text-align: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.contact .emailMessage textarea
+{
+  width: 50%;
+  height: 250px;
+}
+
+.contact .semail
+{
+  align-items: center;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.contact .semail button
+{
+  background-color: rgb(73, 73, 73);
+  width: 230px;
+  border-radius: 30vh;
+  align-items: center; 
+  text-align: center;
+  height: 70px;
+}
+
+.contact .semail p
+{
+  margin-top: 10px;
+  font-size: 17px;
+  font-weight: bold;
+  color: #FFF;
+}
+
+
 
 @media only screen and (max-width: 1024px) {
 
