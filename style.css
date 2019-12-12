@@ -26,7 +26,7 @@ body
 {
   border-radius: 50%;
   width: 250px;
-  border: 2px solid #6CAED5;
+  border: 3px solid rgb(65, 64, 64);
 }
 
 .user-box img:hover
@@ -303,7 +303,7 @@ body
   width: 250px;
   height: 250px;
   border-radius: 50%;
-  border: 2px solid #6CAED5;
+  border: 3px solid rgb(65, 64, 64);
 }
 
 .services .col-sm-4:hover img
