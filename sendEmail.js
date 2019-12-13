@@ -1,9 +1,7 @@
 function sendEmail(){
 	val=document.getElementById("message").value;
 	Email.send({
-		Host : "smtp.gmail.com",
-	    Username : "lamerapalmera@gmail.com",
-	    Password : "elhuevo591",
+		SecureToken :"f1737daf-6aad-4395-bb99-03ab5b7b010d",
 	    To : 'alexandrotapiaflores@gmail.com',
 	    From : "lamerapalmera@gmail.com",
 		Subject : "Contact from MyWebsite",
@@ -25,9 +23,7 @@ function sendEmail(){
 function sendThisEmail(text){
 	val=text
 	Email.send({
-		Host : "smtp.gmail.com",
-	    Username : "lamerapalmera@gmail.com",
-	    Password : "elhuevo591",
+		SecureToken :"f1737daf-6aad-4395-bb99-03ab5b7b010d",
 	    To : 'alexandrotapiaflores@gmail.com',
 	    From : "lamerapalmera@gmail.com",
 		Subject : "Contact from MyWebsite",
