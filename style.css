@@ -84,6 +84,14 @@ body
 
 }
 
+/*
+.navbar-collapse {
+  max-height: 200px;
+  font-size: medium;
+  overflow-y: auto;
+}
+*/
+
 @keyframes mover
 {
   from
