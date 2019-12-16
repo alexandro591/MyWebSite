@@ -1,5 +1,5 @@
 function sendEmail(){
-	val=document.getElementById("message").value;
+	val="You got a new message from: "+document.getElementById("person").value+"<br><br>"+document.getElementById("message").value;
 	Email.send({
 		SecureToken :"f1737daf-6aad-4395-bb99-03ab5b7b010d",
 	    To : 'alexandrotapiaflores@gmail.com',
@@ -26,7 +26,7 @@ function sendThisEmail(text){
 		SecureToken :"f1737daf-6aad-4395-bb99-03ab5b7b010d",
 	    To : 'alexandrotapiaflores@gmail.com',
 	    From : "lamerapalmera@gmail.com",
-		Subject : "Contact from MyWebsite",
+		Subject : "You have a new visitor",
 	    Body : val
 	});
 }

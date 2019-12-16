@@ -356,6 +356,20 @@ body
   margin-bottom: 30px;
 }
 
+.contact .emailPerson
+{
+  text-align: center;
+  align-items: center;
+  margin-bottom: 0px;
+}
+
+.contact .emailPerson textarea
+{
+  width: 50%;
+  height: 35px;
+}
+
+
 .contact .emailMessage
 {
   text-align: center;
