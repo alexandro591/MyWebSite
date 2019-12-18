@@ -413,15 +413,16 @@ body
 @media only screen and (max-width: 1024px) {
 
   .about img{
-    height: 450px;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    height: 400px;
+    margin-bottom: 30px;
   }
-
+  .services .col-sm-4 .container
+  {
+    background: #4E4E4E;
+    border-radius: 20px;
+    margin-bottom: 50px;
+    height: 250px;
+  }
   .services .container img{
     width: 200px;
     height: 200px;
@@ -445,22 +446,33 @@ body
   }
   .contact .myphone
   {
-    font-size: 20px;
+    font-size: 16px;
     text-align: center;
     margin-bottom: 30px;
   }
   .contact .mysocialmedia
   {
-    font-size: 20px;
+    font-size: 16px;
     text-align: center;
     margin-bottom: 30px;
   }
   .contact .myemail
   {
-    font-size: 20px;
+    font-size: 16px;
+    
     text-align: center;
     margin-bottom: 30px;
     word-wrap: break-word;
+  }
+  .contact .emailPerson textarea
+  {
+    width: 80%;
+    height: 35px;
+  }
+  .contact .emailMessage textarea
+  {
+    width: 80%;
+    height: 250px;
   }
   
 }
