@@ -330,7 +330,7 @@ body
 
 .contact
 {
-  height: 120vh;
+  height: 100%;
   background: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url(img/contact.png);
   background-position: center;
   background-size: cover;
@@ -437,12 +437,24 @@ body
 
 
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 900px) {
 
-  .about img{
+  .about img
+  {
     height: 400px;
     margin-bottom: 30px;
   }
+  .resume .timeline h4
+  {
+    text-align: center;
+    padding-right: 10px;
+  }
+
+  .resume .timeline
+  {
+    margin-right: 15px;
+  }
+
   .services .col-sm-4 .container
   {
     background: #4E4E4E;
