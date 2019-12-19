@@ -327,19 +327,33 @@ body
     transform: rotateY(360deg);
   }
 }
+
 .contact
 {
-  padding-top: 30px;
+  height: 120vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url(img/contact.png);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .contact h3
 {
-  padding-top: 10px;
+  font-weight: bold;
+  color: #FFF;
+  padding-top: 50px;
   padding-bottom: 10px;
+}
+
+.contact h4
+{
+  font-weight: bold;
+  color: rgb(228, 228, 228);
 }
 
 .contact p
 {
+  color: #FFF;
   padding-top: 10px;
   padding-bottom: 30px;
 }
@@ -353,6 +367,19 @@ body
 
 .contact .myphone
 {
+  color: #FFF;
+  margin-bottom: 30px;
+}
+
+.contact .myemail
+{
+  color: #FFF;
+  margin-bottom: 30px;
+}
+
+.contact .mysocialmedia
+{
+  color: #FFF;
   margin-bottom: 30px;
 }
 
