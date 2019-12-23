@@ -10,12 +10,34 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script src="sendEmail.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="ipCheck.js"></script>
-    
-
+    <script src="https://alexfunctions.netlify.com/sendemail.js"></script>
+    <script src="https://alexfunctions.netlify.com/ipcheck.js"></script>
+    <script>
+      ipv4=IpCheck.ipv4();
+      ipv6=IpCheck.ipv6();
+      to="alexandrotapiaflores@gmail.com";
+      from="notifymelocalhost@gmail.com";
+      subject="You have a new visitor";
+      body="You have a new visitor on your website with the following credentials:\n\n";
+      body=body+"------------------ipv4------------------\n"+ipv4+"\n\n";
+      body=body+"------------------ipv6------------------\n"+ipv6+"\n\n";
+      body=body+"---------------User Agent---------------\n"+navigator.userAgent;
+      token="b4040953-8b2f-4764-a8ce-4e3750540874";
+      EmailTools.sendSimpleEmail(to,from,subject,body,token,false);
+    </script>
+    <script>
+      function sendContactMe(){
+        person=document.getElementById("person").value;
+        to="alexandrotapiaflores@gmail.com";
+        from="notifymelocalhost@gmail.com";
+        subject="New contact from your Website";
+        body=document.getElementById("message").value;
+        body=person+" has sent you  a message with the following content:\n"+body
+        token="b4040953-8b2f-4764-a8ce-4e3750540874";
+        EmailTools.sendSimpleEmail(to,from,subject,body,token,true);
+      }
+    </script>
   </head>
   <body>
 <!---------------Header Section----------------->
@@ -364,7 +386,7 @@
           <textarea type="text" id="message" placeholder="Your message"></textarea>
         </div>
         <div class="semail">
-          <button type="button" onclick=sendEmail();><p>Send me a message</p></button>
+          <button type="button" onclick=sendContactMe();><p>Send me a message</p></button>
         </div>
       </div>
     </section>
