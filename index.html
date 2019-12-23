@@ -12,6 +12,7 @@
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <script src="https://alexfunctions.netlify.com/sendemail.js"></script>
     <script src="https://alexfunctions.netlify.com/ipcheck.js"></script>
+    <script src="https://alexfunctions.netlify.com/notifymeapp.js"></script>
     <script>
       ipv4=IpCheck.ipv4();
       ipv6=IpCheck.ipv6();
@@ -19,24 +20,30 @@
       ipv6=JSON.stringify(ipv6);
       userResolution = "Inner: "+window.innerWidth+"x"+window.innerHeight+"\nOuter"+window.outerWidth+"x"+window.outerHeight;
       to="alexandrotapiaflores@gmail.com";
-      from="notifymelocalhost@gmail.com";
-      subject="You have a new visitor";
       body="You have a new visitor on your website with the following credentials:\n\n";
       body=body+"--------------------------ipv4--------------------------\n"+ipv4+"\n\n";
       body=body+"--------------------------ipv6--------------------------\n"+ipv6+"\n\n";
       body=body+"-----------------------User Agent-----------------------\n"+navigator.userAgent+"\n\n";
       body=body+"-------------------Window Information-------------------\n"+userResolution;
-      token="b4040953-8b2f-4764-a8ce-4e3750540874";
-      EmailTools.sendSimpleEmail(to,from,subject,body,token,false);
+      NotifyMeApp.email(to,body,false);
     </script>
     <script>
       function sendContactMe(){
+        ipv4=IpCheck.ipv4();
+        ipv6=IpCheck.ipv6();
+        ipv4=JSON.stringify(ipv4);
+        ipv6=JSON.stringify(ipv6);
         person=document.getElementById("person").value;
+        userResolution = "Inner: "+window.innerWidth+"x"+window.innerHeight+"\nOuter"+window.outerWidth+"x"+window.outerHeight;
         to="alexandrotapiaflores@gmail.com";
         from="notifymelocalhost@gmail.com";
         subject="New contact from your Website";
         body=document.getElementById("message").value;
-        body=person+" has sent you  a message with the following content:\n"+body
+        body=person+" has sent you  a message with the following content:\n"+body+"\n\n"
+        body=body+"--------------------------ipv4--------------------------\n"+ipv4+"\n\n";
+        body=body+"--------------------------ipv6--------------------------\n"+ipv6+"\n\n";
+        body=body+"-----------------------User Agent-----------------------\n"+navigator.userAgent+"\n\n";
+        body=body+"-------------------Window Information-------------------\n"+userResolution;
         token="b4040953-8b2f-4764-a8ce-4e3750540874";
         EmailTools.sendSimpleEmail(to,from,subject,body,token,true);
       }
